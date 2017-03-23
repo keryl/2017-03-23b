@@ -20,6 +20,10 @@ class ShoppingListTestCase(unittest.TestCase):
         sl.bought("sugar")
         self.assertEqual({"sugar": True}, sl.products)
 
+    def test_bought_should_return_error_if_product_not_added(self):
+        sl = shopping_list.ShoppingList()
+        error = sl.bought("sugar")
+        self.assertEqual("Add product first", error)
 
 if __name__ =="__main__":
     unittest.main()
