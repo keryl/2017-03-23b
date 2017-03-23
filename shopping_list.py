@@ -15,5 +15,5 @@ class ShoppingList():
         product_is_added = self.products.get(product, None)
         if product_is_added == None:
             return "Add product first"
-
-        self.products[product] = True
+        else:
+            self.products[product] = True
